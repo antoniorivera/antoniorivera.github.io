@@ -1,0 +1,9 @@
+.image-container {
+  background: url("../images/snow.jpg") center center no-repeat;
+  background-size: cover;
+}
+.top-nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}

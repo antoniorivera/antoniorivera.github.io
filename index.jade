@@ -1,23 +1,45 @@
 doctype html
-html(language="en")
+html(language="en" ng-app="mainModule")
 
   head
+    link(type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection")
+    link(type="text/css" rel="stylesheet" href="css/index.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="http://code.jquery.com/jquery-latest.min.js")
     script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js")
+    script(src="./scripts/main.js")
+    script(src="./scripts/main.controller.js")
     
-  body
-    div(ng-app="")
-      ul
-        li
-          a About Me
-        li 
-          a Resume
-        li
-          a(href="timeline.html") Work Experience
-        li
-          a Hobbies and Interests
+  body(ng-controller="mainController")
+    div
+      //- navbar
+      nav.top-nav
+        div.nav-wrapper
+          a.brand-logo.center.fixed Antonio Rivera
+          ul.right
+            li
+              a About Me
+            li 
+              a Resume
+            li
+              a(href="timeline.html") Work Experience
+            li
+              a Hobbies and Interests
+      //- page content
+      div.container
+        div.row
+          div.col.s12.m12.l12
+            img.responsive-img(ng-src="{{currentImageSource}}")
+        div.row
+          div.col.s12.m12.l12
+            ul(ng-repeat="image in imageSources track by $index")
+              li.center(ng-click="setImage($index)") o
+              
+        
       h1 Antonio Rivera
       p 
         | Welcome to my website. It is currently under construction.
         br 
         | UPDATE 7/15/15: The Work Experience page is functional. Probably should have started working on this page first...
+      p UPDATE 7/16/15: Started working on index.html.
       a(href='mailto:anr@mit.edu') Contact Me

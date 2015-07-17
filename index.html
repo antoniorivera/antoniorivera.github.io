@@ -1,21 +1,44 @@
 <!DOCTYPE html>
-<html language="en">
+<html language="en" ng-app="mainModule">
   <head>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/main.controller.js"></script>
   </head>
-  <body>
-    <div ng-app="">
-      <ul>
-        <li><a>About Me</a></li>
-        <li> <a>Resume</a></li>
-        <li><a href="timeline.html">Work Experience</a></li>
-        <li><a>Hobbies and Interests</a></li>
-      </ul>
+  <body ng-controller="mainController">
+    <div>
+      <nav class="top-nav">
+        <div class="nav-wrapper"><a class="brand-logo center fixed">Antonio Rivera</a>
+          <ul class="right">
+            <li><a>About Me</a></li>
+            <li> <a>Resume</a></li>
+            <li><a href="timeline.html">Work Experience</a></li>
+            <li><a>Hobbies and Interests</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m12 l12"><img ng-src="{{currentImageSource}}" class="responsive-img"></div>
+        </div>
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <ul ng-repeat="image in imageSources track by $index">
+              <li ng-click="setImage($index)" class="center">o</li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <h1>Antonio Rivera</h1>
       <p>
          
         Welcome to my website. It is currently under construction.<br>UPDATE 7/15/15: The Work Experience page is functional. Probably should have started working on this page first...
-      </p><a href="mailto:anr@mit.edu">Contact Me</a>
+      </p>
+      <p>UPDATE 7/16/15: Started working on index.html.</p><a href="mailto:anr@mit.edu">Contact Me</a>
     </div>
   </body>
 </html>
