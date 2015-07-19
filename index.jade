@@ -29,11 +29,11 @@ html(language="en" ng-app="mainModule")
       div.container
         div.row
           div.col.s12.m12.l12
-            img.responsive-img(ng-src="{{currentImageSource}}")
+            img.responsive-img(id="slide" src="./images/snow.jpg")
         div.row
           div.col.s12.m12.l12
-            ul(ng-repeat="image in imageSources track by $index")
-              li.center(ng-click="setImage($index)") o
+            ul.slide-button-list.center
+              li.slide-button(ng-repeat="image in slideImages track by $index" ng-click="setImage($index); toggleBold($index);") &bull;
               
         
       h1 Antonio Rivera

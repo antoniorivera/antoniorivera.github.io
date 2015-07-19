@@ -2,16 +2,29 @@ app.controller('mainController', ['$scope', function($scope) {
   loadImages();
 
   $scope.setImage = function(index) {
-    $scope.currentImageSource = $scope.imageSources[index];
+    //$scope.currentImageSource = $scope.imageSources[index];
+    document.getElementById('slide').src = $scope.slideImages[index].src;
+    //alert('Source set to ' + $scope.slideImages[index].src);
   };
 
   function loadImages() {
-    $scope.imageSources = [];
-    $scope.imageSources.push('./images/snow.jpg');
-    $scope.imageSources.push('./images/colors.jpg');
-    $scope.imageSources.push('./images/MIT.jpg');
-    $scope.imageSources.push('./images/sunset.jpg');
-
-    $scope.currentImageSource = $scope.imageSources[0];
+    $scope.slideImages = [];
+    $scope.slideImages.push(new Image());
+    $scope.slideImages[0].src = ('./images/snow.jpg');
+    $scope.slideImages.push(new Image());
+    $scope.slideImages[1].src = ('./images/MIT.jpg');
+    $scope.slideImages.push(new Image());
+    $scope.slideImages[2].src = ('./images/sunset.jpg');
   }
+
+  $scope.toggleBold = function(index) {
+    var buttons = $('.slide-button');
+    buttons.removeClass('bold');
+    buttons[index].className = buttons[index].className + ' bold';
+  };
 }]);
+
+$(document).ready(function() {  //set the first slide button to selected
+  var firstButton = $('.slide-button')[0];
+  firstButton.className = firstButton.className + ' bold';
+});

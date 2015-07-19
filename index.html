@@ -23,12 +23,12 @@
       </nav>
       <div class="container">
         <div class="row">
-          <div class="col s12 m12 l12"><img ng-src="{{currentImageSource}}" class="responsive-img"></div>
+          <div class="col s12 m12 l12"><img id="slide" src="./images/snow.jpg" class="responsive-img"></div>
         </div>
         <div class="row">
           <div class="col s12 m12 l12">
-            <ul ng-repeat="image in imageSources track by $index">
-              <li ng-click="setImage($index)" class="center">o</li>
+            <ul class="slide-button-list center">
+              <li ng-repeat="image in slideImages track by $index" ng-click="setImage($index); toggleBold($index);" class="slide-button">&bull;</li>
             </ul>
           </div>
         </div>

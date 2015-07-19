@@ -7,3 +7,15 @@
   top: 0px;
   left: 0px;
 }
+.bold {
+  font-weight: bold;
+  color: black;
+}
+.slide-button {
+  display: inline;
+  font-size: 48px;
+}
+.slide-button-list {
+  white-space: nowrap;
+  color: gray;
+}
