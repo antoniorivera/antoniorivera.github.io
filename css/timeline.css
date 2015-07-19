@@ -19,7 +19,7 @@ p {
   background-color: #dd0000;
 }
 .invisible {
-  color: white;
+  visibility: hidden;
 }
 .main-text {
   margin-top: 104px;

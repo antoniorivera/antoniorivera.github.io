@@ -27,19 +27,20 @@ html(language="en" ng-app="mainModule")
               a Hobbies and Interests
       //- page content
       div.container
+        div.row.top-row
+          div.col.s12.m12.l12
+            p 
+              | Welcome to my website. It is currently under construction. 
+              | I am computer science major at Massachusetts Institute of Technology. I am currently a 
+              | junior, and I am planning to graduate with a bachelor's degree after the fall term of 
+              | my senior year. 
         div.row
           div.col.s12.m12.l12
-            img.responsive-img(id="slide" src="./images/snow.jpg")
+            img.responsive-img(id="slide" src="./images/MIT.jpg")
         div.row
           div.col.s12.m12.l12
             ul.slide-button-list.center
               li.slide-button(ng-repeat="image in slideImages track by $index" ng-click="setImage($index); toggleBold($index);") &bull;
               
-        
-      h1 Antonio Rivera
-      p 
-        | Welcome to my website. It is currently under construction.
-        br 
-        | UPDATE 7/15/15: The Work Experience page is functional. Probably should have started working on this page first...
-      p UPDATE 7/16/15: Started working on index.html.
-      a(href='mailto:anr@mit.edu') Contact Me
+        center 
+          a.center(href='mailto:anr@mit.edu') Contact Me

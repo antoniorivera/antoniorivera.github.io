@@ -10,9 +10,9 @@ app.controller('mainController', ['$scope', function($scope) {
   function loadImages() {
     $scope.slideImages = [];
     $scope.slideImages.push(new Image());
-    $scope.slideImages[0].src = ('./images/snow.jpg');
+    $scope.slideImages[0].src = ('./images/MIT.jpg');
     $scope.slideImages.push(new Image());
-    $scope.slideImages[1].src = ('./images/MIT.jpg');
+    $scope.slideImages[1].src = ('./images/snow.jpg');
     $scope.slideImages.push(new Image());
     $scope.slideImages[2].src = ('./images/sunset.jpg');
   }

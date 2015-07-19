@@ -14,8 +14,15 @@
 .slide-button {
   display: inline;
   font-size: 48px;
+  cursor: pointer;
 }
 .slide-button-list {
   white-space: nowrap;
   color: gray;
+}
+.top-row {
+  margin-top: 64px;
+}
+.nav-wrapper {
+  background-color: #dd0000;
 }
