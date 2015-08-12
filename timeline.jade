@@ -13,13 +13,15 @@ html(language="en")
           a.brand-logo.center.fixed Work Timeline
           ul.right
             li
-              a.left.fixed About Me
+              a(href="aboutme.html") About Me
+            li 
+              a(href="./resume.pdf") Resume
             li
-              a.left.fixed Resume
+              a(href="timeline.html") Work Experience
             li
-              a.left.fixed(href="coursework.html") Coursework
+              a(href="coursework.html") Coursework
             li
-              a.left.fixed(href="/") Home
+              a(href="index.html") Home
         ul.side-nav.fixed(id="nav-mobile")
           li 
             a(href="#2012") 2012
@@ -51,6 +53,7 @@ html(language="en")
             a.anchor(name="2013")
             h1 2013
             hr
+            img.responsive-img(src="./images/pointless_struggle_screenshot.png")
             p
               | In 12th grade, as a final project for AP Computer Science, I wrote a single-player platformer/2D-shooter. 
               | The player had to move and jump to avoid enemy attacks, and had the ability to 
@@ -64,6 +67,7 @@ html(language="en")
             a.anchor(name="2014")
             h1 2014
             hr
+            img.responsive-img(src="./images/aftermath_screenshot_2.png")
             p 
               | In the summer following my freshman year at 
               a(href="http://www.mit.edu") Massachusetts Institute of Technology, 
@@ -94,7 +98,16 @@ html(language="en")
             p
               | In the summer after my sophomore year of college, I worked at 
               a(href="http://www.ultimatesoftware.com/") Ultimate Software 
-              | as a software engineering intern. More information will be included following the completion of the internship.
+              | as a software engineering intern. I worked on three internal tools used by the company. On the first, I 
+              | did back-end development in C#, adding functionality to a testing software. More specifically, I made it so 
+              | that parameters (variables) could be used in the steup and teardown of test files. I also worked on several small bug fixes.
+            p The next project I worked on was a build console that displayed the progress of projects that were currently being 
+              | built within the company. I mostly worked on front-end bug fixes and unit tests. I also set up and carried out 
+              | performance testing using Apache JMeter. 
+            p The last project I worked on was a visual display of the hierarchical organization of projects within the company. 
+              | As before, I worked on visual improvements and bug fixes -- mostly involving animations -- and I set up and wrote 
+              | over 100 front-end unit tests to the project. For the unit testing, I used Jasmine and Karma with Javascript to write 
+              | the tests. 
               
     script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
     script(type="text/javascript" src="js/materialize.js")
