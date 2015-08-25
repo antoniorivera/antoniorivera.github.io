@@ -28,4 +28,9 @@ $(document).ready(function() {  //set the first slide button to selected
   var firstButton = $('.slide-button')[0];
   firstButton.className = firstButton.className + ' bold';
   $('.button-collapse').sideNav();
+
+  // sets the correct offset (accounts for both mobile and desktop versions)
+  var offset = $('.nav-wrapper').height();
+
+  $('.side-nav').css('margin-top', offset);
 });
