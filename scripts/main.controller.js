@@ -27,4 +27,5 @@ app.controller('mainController', ['$scope', function($scope) {
 $(document).ready(function() {  //set the first slide button to selected
   var firstButton = $('.slide-button')[0];
   firstButton.className = firstButton.className + ' bold';
+  $('.button-collapse').sideNav();
 });

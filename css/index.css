@@ -7,6 +7,11 @@
   top: 0px;
   left: 0px;
 }
+.side-nav {
+  left: 0px;
+  margin-top: 64px;
+  color: black;
+}
 .bold {
   font-weight: bold;
   color: black;

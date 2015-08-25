@@ -4,30 +4,48 @@ html(language="en" ng-app="mainModule")
   head
     link(type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection")
     link(type="text/css" rel="stylesheet" href="css/index.css")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     script(src="http://code.jquery.com/jquery-latest.min.js")
     script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
+    script(src="./scripts/main.js")
+    script(src="./scripts/coursework.controller.js")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     
   body
     div
       //- navbar
-      nav.top-nav
-        div.nav-wrapper
-          a.brand-logo.center.fixed About Me
-          ul.right
-            li
-              a(href="aboutme.html") About Me
-            li 
-              a(href="./resume.pdf") Resume
-            li
-              a(href="timeline.html") Work Experience
-            li
-              a(href="coursework.html") Coursework
-            li
-              a(href="index.html") Home
+      div.navbar-fixed
+        nav
+          div.nav-wrapper
+            a.brand-logo.center.fixed About Me
+            a.button-collapse(href="#" data-activates="mobile-demo")
+              i.material-icons menu
+            ul.right.hide-on-med-and-down
+              li
+                a(href="aboutme.html") About Me
+              li 
+                a(href="./resume.pdf") Resume
+              li
+                a(href="timeline.html") Work Experience
+              li
+                a(href="coursework.html") Coursework
+              li
+                a(href="index.html") Home
+            ul.side-nav(id="mobile-demo")
+              li
+                a(href="aboutme.html") About Me
+              li 
+                a(href="./resume.pdf") Resume
+              li
+                a(href="timeline.html") Work Experience
+              li
+                a(href="coursework.html") Coursework
+              li
+                a(href="index.html") Home
       //- page content
       div.container
-        div.row.top-row
+        div.row
           div.col.s12.m12.l12
             p I am currently a junior at Massachusetts Institute of Technology pursuing a Bachelor's of Science degree 
               | in computer science and a Minor in Philosophy. Ever since I played my first video game (Pokemon Crystal) as a child, I've been 

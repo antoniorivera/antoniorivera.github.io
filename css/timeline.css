@@ -21,9 +21,9 @@ p {
 .invisible {
   visibility: hidden;
 }
-.main-text {
+/*.main-text {
   margin-top: 104px;
-}
+}*/
 .anchor {
   display: block;
   position: relative;

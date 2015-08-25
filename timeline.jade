@@ -1,17 +1,25 @@
 doctype html
 html(language="en")
   head
-    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js")
     link(type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection")
     link(type="text/css" rel="stylesheet" href="css/timeline.css")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    script(src="http://code.jquery.com/jquery-latest.min.js")
+    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
+    script(src="./scripts/main.js")
+    script(src="./scripts/coursework.controller.js")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
   body
     header
-      nav.top-nav
+    div.navbar-fixed
+      nav
         div.nav-wrapper
           a.brand-logo.center.fixed Work Timeline
-          ul.right
+          a.button-collapse(href="#" data-activates="mobile-demo")
+            i.material-icons menu
+          ul.right.hide-on-med-and-down
             li
               a(href="aboutme.html") About Me
             li 
@@ -22,15 +30,26 @@ html(language="en")
               a(href="coursework.html") Coursework
             li
               a(href="index.html") Home
-        ul.side-nav.fixed(id="nav-mobile")
-          li 
-            a(href="#2012") 2012
-          li 
-            a(href="#2013") 2013
-          li 
-            a(href="#2014") 2014
-          li
-            a(href="#2015") 2015
+          ul.side-nav(id="mobile-demo")
+            li
+              a(href="aboutme.html") About Me
+            li 
+              a(href="./resume.pdf") Resume
+            li
+              a(href="timeline.html") Work Experience
+            li
+              a(href="coursework.html") Coursework
+            li
+              a(href="index.html") Home
+          ul.side-nav.fixed(id="nav-mobile")
+            li 
+              a(href="#2012") 2012
+            li 
+              a(href="#2013") 2013
+            li 
+              a(href="#2014") 2014
+            li
+              a(href="#2015") 2015
     main
       div.row
         div.col.s3.m3.l3
