@@ -3,6 +3,9 @@
   margin-top: 64px;
   color: black;
 }*/
+.title {
+  white-space: nowrap;
+}
 .top-nav {
   position: fixed;
   top: 0px;
